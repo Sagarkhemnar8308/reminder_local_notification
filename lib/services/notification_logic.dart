@@ -51,7 +51,7 @@ class NotificationLogic {
     required DateTime datetime,
   }) async {
     if (datetime.isBefore(DateTime.now())) {
-      datetime = datetime.add(const Duration(seconds: 1));
+      datetime = datetime.add(Duration(seconds: 1));
     }
     _notifications.zonedSchedule(
       id,

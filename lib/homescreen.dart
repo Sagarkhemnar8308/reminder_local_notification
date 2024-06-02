@@ -17,13 +17,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   bool on = true;
-
   @override
   void initState() {
     super.initState();
     user = FirebaseAuth.instance.currentUser;
     NotificationLogic.init(
-      
       user?.uid ?? "",
     );
     localNotifications();
@@ -106,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Card(
                           child: ListTile(
                             subtitle: Text(formattedTime),
-                            title:  Column(
+                            title: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
